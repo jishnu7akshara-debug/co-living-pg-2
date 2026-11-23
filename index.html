@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ember House | Co-living for young professionals in Bengaluru</title>
+  <meta name="description" content="Private rooms and studios in fully serviced co-living houses in Indiranagar, Koramangala, Whitefield and Hebbal. Housekeeping, chef-cooked dinners, a library and a work lounge in one monthly membership." />
+  <meta name="theme-color" content="#1C1520" />
+  <meta property="og:title" content="Ember House | Co-living for young professionals" />
+  <meta property="og:description" content="Come home to a house that's already lit." />
+  <meta property="og:image" content="/assets/img/room-loft.jpg" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/assets/video/living-poster.jpg" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Loader: counter, then shutters lift -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__shutters"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="loader__brand">Ember House</p>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+    <p class="loader__count" id="loaderCount">00</p>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Ember House home"><span class="brand__mark"></span>Ember House</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#rooms">Rooms</a>
+      <a href="#walk">The house</a>
+      <a href="#plans">Membership</a>
+      <a href="#houses">Locations</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--ember nav__cta" href="#reserve">Reserve a room</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </header>
+  <div class="menu" id="menu" hidden>
+    <a href="#rooms">Rooms</a><a href="#walk">The house</a><a href="#plans">Membership</a><a href="#houses">Locations</a><a href="#faq">FAQ</a>
+    <a href="#reserve" class="btn btn--ember">Reserve a room</a>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO: dim room, your cursor is the lamp -->
+    <section class="hero" id="top">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="/assets/video/living-poster.jpg">
+        <source src="/assets/video/living.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__dark" id="heroDark" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__kicker">Co-living for young professionals in Bengaluru</p>
+        <h1 class="hero__title">
+          <span class="ln"><span>Come home to</span></span>
+          <span class="ln"><span>a house that's</span></span>
+          <span class="ln"><span><em>already lit.</em></span></span>
+        </h1>
+        <div class="hero__foot">
+          <p>Private rooms in serviced houses, with dinner cooked five nights a week and someone else doing the chores.</p>
+          <div class="hero__actions">
+            <a class="btn btn--ember" href="#rooms">See the rooms</a>
+            <span class="hero__price">Memberships from <b>₹16,500</b> a month</span>
+          </div>
+        </div>
+      </div>
+      <p class="hero__hint" aria-hidden="true"><span class="only-fine">Move your cursor to light the room</span><span class="only-touch">Scroll to step inside</span></p>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="wrap intro__grid">
+        <div class="intro__copy">
+          <p class="intro__lead" id="introLead">You work long days. Ember House handles the rest: rooms cleaned, dinner on the table at eight, bills paid in one go, and a house full of people your age who also want their evenings back.</p>
+          <a class="link" href="#walk">Walk through a house</a>
+        </div>
+        <div class="intro__pics">
+          <img class="intro__pic intro__pic--a" data-speed="-0.12" src="/assets/img/armchair.jpg" alt="Cream armchair with a cushion by a sunlit window" width="1600" height="1067" loading="lazy" decoding="async" />
+          <img class="intro__pic intro__pic--b" data-speed="0.1" src="/assets/img/candle.jpg" alt="Laptop beside a lit candle on a wooden table" width="1600" height="1067" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS: accordion panels -->
+    <section class="rooms" id="rooms">
+      <div class="wrap">
+        <div class="rooms__head">
+          <h2 class="h2">Four kinds of room. All of them yours to close the door on.</h2>
+          <p class="muted">Every room has a queen bed with hotel linen, blackout curtains, a work desk and fast Wi-Fi. Prices include all services.</p>
+        </div>
+        <div class="acc" id="acc">
+          <article class="acc__panel is-open" tabindex="0">
+            <img src="/assets/img/room-loft.jpg" alt="Modern bedroom with wooden walls and a private bathroom" width="1600" height="1067" loading="lazy" decoding="async" />
+            <h3 class="acc__tab">The Loft</h3>
+            <div class="acc__body">
+              <p class="acc__tag">Private room, ensuite</p>
+              <h3>The Loft</h3>
+              <p>Our biggest rooms, with a private bathroom, walk-in wardrobe and a reading corner.</p>
+              <p class="acc__price">₹28,500 <span>a month</span></p>
+            </div>
+          </article>
+          <article class="acc__panel" tabindex="0">
+            <img src="/assets/img/room-nook.jpg" alt="Resident relaxing on a bed with breakfast on a tray" width="1600" height="1067" loading="lazy" decoding="async" />
+            <h3 class="acc__tab">The Nook</h3>
+            <div class="acc__body">
+              <p class="acc__tag">Private room, shared bath for 2</p>
+              <h3>The Nook</h3>
+              <p>A calm, compact private room. Breakfast in bed is allowed. We checked.</p>
+              <p class="acc__price">₹22,000 <span>a month</span></p>
+            </div>
+          </article>
+          <article class="acc__panel" tabindex="0">
+            <img src="/assets/img/room-twin.jpg" alt="Soft bed with rumpled linen and closed blinds" width="1600" height="1067" loading="lazy" decoding="async" />
+            <h3 class="acc__tab">The Pair</h3>
+            <div class="acc__body">
+              <p class="acc__tag">Twin sharing</p>
+              <h3>The Pair</h3>
+              <p>Share with one person we match you with, or bring your own friend. Two beds, two desks, one bathroom.</p>
+              <p class="acc__price">₹16,500 <span>a month</span></p>
+            </div>
+          </article>
+          <article class="acc__panel" tabindex="0">
+            <img src="/assets/img/room-studio.jpg" alt="Studio living room with a blue sofa and a full bookshelf" width="1600" height="1068" loading="lazy" decoding="async" />
+            <h3 class="acc__tab">The Studio</h3>
+            <div class="acc__body">
+              <p class="acc__tag">Private studio with kitchenette</p>
+              <h3>The Studio</h3>
+              <p>A separate living area and kitchenette for people who host, cook, or just like more room.</p>
+              <p class="acc__price">₹34,000 <span>a month</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WALK-THROUGH: 3D fly-through -->
+    <section class="walk" id="walk">
+      <div class="walk__pin">
+        <div class="walk__head">
+          <h2 class="h2">Walk through the house.</h2>
+          <p class="walk__now" aria-live="polite"><span id="walkLabel">Front door</span></p>
+        </div>
+        <div class="walk__space" id="walkSpace" aria-hidden="true">
+          <figure data-label="The library" style="--x:-34;--y:-8;--z:0"><img src="/assets/img/library.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Reading chair" style="--x:30;--y:10;--z:-1"><img src="/assets/img/armchair.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="The lounge" style="--x:-24;--y:16;--z:-2"><img src="/assets/img/leather.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Dinner, 8 pm" style="--x:28;--y:-14;--z:-3"><img src="/assets/img/bistro.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="The gallery wall" style="--x:-32;--y:-12;--z:-4" class="tall"><img src="/assets/img/gallery-wall.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Rooftop dining" style="--x:26;--y:12;--z:-5"><img src="/assets/img/diningview.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Late work" style="--x:-26;--y:10;--z:-6"><img src="/assets/img/candle.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Shelf of old favourites" style="--x:32;--y:-10;--z:-7"><img src="/assets/img/oldbooks.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Bathrooms" style="--x:-22;--y:-14;--z:-8" class="tall"><img src="/assets/img/bath.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure data-label="Your room" style="--x:0;--y:0;--z:-9"><img src="/assets/img/room-loft.jpg" alt="" loading="lazy" decoding="async" /></figure>
+        </div>
+        <div class="walk__progress" aria-hidden="true"><i id="walkBar"></i></div>
+      </div>
+    </section>
+
+    <!-- AMENITY MARQUEE -->
+    <section class="amen" aria-label="What's included">
+      <div class="amen__row" id="amenA">
+        <span>Housekeeping</span><span class="o">Chef dinners</span><span>Library</span><span class="o">Work lounge</span><span>Laundry</span><span class="o">Rooftop</span>
+        <span>Housekeeping</span><span class="o">Chef dinners</span><span>Library</span><span class="o">Work lounge</span><span>Laundry</span><span class="o">Rooftop</span>
+      </div>
+      <div class="amen__row amen__row--rev" id="amenB">
+        <span class="o">300 Mbps fibre</span><span>Power backup</span><span class="o">Gym access</span><span>Concierge</span><span class="o">Bike parking</span><span>Movie nights</span>
+        <span class="o">300 Mbps fibre</span><span>Power backup</span><span class="o">Gym access</span><span>Concierge</span><span class="o">Bike parking</span><span>Movie nights</span>
+      </div>
+    </section>
+
+    <!-- EVENINGS: cursor image trail -->
+    <section class="evenings" id="evenings">
+      <div class="evenings__stage" id="trail">
+        <p class="evenings__text">Every evening here<br />looks a little different.</p>
+        <p class="evenings__hint"><span class="only-fine">Move your cursor around</span><span class="only-touch">Tap anywhere</span></p>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="plans" id="plans">
+      <div class="wrap">
+        <div class="plans__head">
+          <h2 class="h2">One membership. Everything in it.</h2>
+          <div class="switch" role="radiogroup" aria-label="Billing">
+            <button role="radio" aria-checked="true" data-plan="m">Month to month</button>
+            <button role="radio" aria-checked="false" data-plan="s">6-month plan <em>save 8%</em></button>
+          </div>
+        </div>
+        <div class="ptable" role="table" aria-label="Membership by room">
+          <div class="prow prow--head" role="row">
+            <span role="columnheader"></span>
+            <span role="columnheader">The Pair</span><span role="columnheader">The Nook</span><span role="columnheader">The Loft</span><span role="columnheader">The Studio</span>
+          </div>
+          <div class="prow prow--price" role="row">
+            <span role="rowheader">Per month</span>
+            <span role="cell" class="price" data-m="16500">₹16,500</span><span role="cell" class="price" data-m="22000">₹22,000</span><span role="cell" class="price" data-m="28500">₹28,500</span><span role="cell" class="price" data-m="34000">₹34,000</span>
+          </div>
+          <div class="prow" role="row"><span role="rowheader">Weekly housekeeping and linen</span><span role="cell" class="y">Yes</span><span role="cell" class="y">Yes</span><span role="cell" class="y">Twice a week</span><span role="cell" class="y">Twice a week</span></div>
+          <div class="prow" role="row"><span role="rowheader">Chef dinners, Monday to Friday</span><span role="cell" class="y">Yes</span><span role="cell" class="y">Yes</span><span role="cell" class="y">Yes</span><span role="cell" class="y">Yes</span></div>
+          <div class="prow" role="row"><span role="rowheader">Private bathroom</span><span role="cell" class="n">Shared for 2</span><span role="cell" class="n">Shared for 2</span><span role="cell" class="y">Yes</span><span role="cell" class="y">Yes</span></div>
+          <div class="prow" role="row"><span role="rowheader">Kitchenette</span><span role="cell" class="n">House kitchen</span><span role="cell" class="n">House kitchen</span><span role="cell" class="n">House kitchen</span><span role="cell" class="y">Yes</span></div>
+          <div class="prow" role="row"><span role="rowheader">Electricity, Wi-Fi, water, backup</span><span role="cell" class="y">Included</span><span role="cell" class="y">Included</span><span role="cell" class="y">Included</span><span role="cell" class="y">Included</span></div>
+          <div class="prow" role="row"><span role="rowheader">Security deposit</span><span role="cell">1 month</span><span role="cell">1 month</span><span role="cell">1 month</span><span role="cell">1 month</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONSOON: curtains part on a rainy window -->
+    <section class="monsoon" id="monsoon">
+      <div class="monsoon__pin">
+        <video class="monsoon__video" muted loop playsinline preload="none" poster="/assets/video/rain-poster.jpg" data-lazy-video aria-hidden="true">
+          <source data-src="/assets/video/rain.mp4" type="video/mp4" />
+        </video>
+        <div class="monsoon__half monsoon__half--l"><span>When it rains</span></div>
+        <div class="monsoon__half monsoon__half--r"><span>in Bengaluru,</span></div>
+        <p class="monsoon__quote">the whole house ends up in the lounge with chai and a bad movie. Nobody has to drive home.</p>
+      </div>
+    </section>
+
+    <!-- HOUSES -->
+    <section class="houses" id="houses">
+      <div class="wrap">
+        <h2 class="h2">Four houses, each on a quiet street near the work.</h2>
+        <div class="hgrid">
+          <article class="hcard">
+            <div class="hcard__img"><img src="/assets/img/library.jpg" alt="Library room lined with bookshelves" width="1600" height="1060" loading="lazy" decoding="async" /></div>
+            <h3>Indiranagar</h3>
+            <p>12th Main. 6 minutes to the metro, 15 to Embassy Golf Links.</p>
+            <p class="hcard__meta">18 rooms, 3 open</p>
+          </article>
+          <article class="hcard">
+            <div class="hcard__img"><img src="/assets/img/cafe.jpg" alt="Busy cafe with warm lights and long tables" width="1600" height="1138" loading="lazy" decoding="async" /></div>
+            <h3>Koramangala</h3>
+            <p>4th Block. Walk to the cafes on 80 Feet Road, 10 minutes to the ORR.</p>
+            <p class="hcard__meta">22 rooms, 5 open</p>
+          </article>
+          <article class="hcard">
+            <div class="hcard__img"><img src="/assets/img/diningview.jpg" alt="Dining table by a window with a city view" width="1600" height="1067" loading="lazy" decoding="async" /></div>
+            <h3>Whitefield</h3>
+            <p>Near ITPL. Shuttle to the tech park, rooftop with a sunset view.</p>
+            <p class="hcard__meta">26 rooms, 8 open</p>
+          </article>
+          <article class="hcard">
+            <div class="hcard__img"><img src="/assets/img/leather.jpg" alt="Leather sofa with cream cushions" width="1600" height="1067" loading="lazy" decoding="async" /></div>
+            <h3>Hebbal</h3>
+            <p>Off Bellary Road. 10 minutes to Manyata, 30 to the airport.</p>
+            <p class="hcard__meta">16 rooms, 2 open</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__grid">
+        <h2 class="h2">Before you ask.</h2>
+        <div>
+          <details><summary>Who lives at Ember House?</summary><p>Mostly people aged 22 to 32 working in tech, consulting, design and startups. A few are doing postgraduate study. Everyone has a private or shared room and the common spaces are for all.</p></details>
+          <details><summary>What's the minimum stay?</summary><p>One month. Month-to-month members give 30 days' notice. The 6-month plan saves 8% and has a 3-month lock-in.</p></details>
+          <details><summary>Can I have guests over?</summary><p>Yes. Guests are welcome in common areas until 11 pm and can stay over in your room twice a month if your roommate (if you have one) is fine with it.</p></details>
+          <details><summary>Do you give rent receipts for HRA?</summary><p>Yes, every month, with the house's registered address and a PAN for the landlord.</p></details>
+          <details><summary>Is food included every day?</summary><p>Dinner is cooked Monday to Friday. The kitchen and pantry are open all week for everything else.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVE: multi-step -->
+    <section class="reserve" id="reserve">
+      <div class="wrap reserve__grid">
+        <div class="reserve__copy">
+          <h2 class="reserve__title">Reserve a room in three steps.</h2>
+          <p class="muted">No payment now. A house host will call you within the day to arrange a visit or a video tour.</p>
+          <img class="reserve__img" src="/assets/img/curtain.jpg" alt="Shadow of a window frame falling on a sheer curtain" width="1600" height="1033" loading="lazy" decoding="async" />
+        </div>
+        <form class="steps" id="steps" novalidate>
+          <div class="steps__bar" aria-hidden="true"><i id="stepsBar"></i></div>
+          <p class="steps__count" id="stepsCount">Step 1 of 3</p>
+          <div class="steps__track">
+            <fieldset class="step is-on" data-step="0">
+              <legend>About you</legend>
+              <div class="field"><label for="r-name">Full name</label><input id="r-name" type="text" autocomplete="name" required /><p class="err">Enter your full name.</p></div>
+              <div class="field"><label for="r-phone">Mobile number</label><input id="r-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10 digits" required /><p class="err">Enter a 10-digit mobile number.</p></div>
+              <div class="field"><label for="r-work">Where do you work or study?</label><input id="r-work" type="text" autocomplete="organization" placeholder="Company or college" /></div>
+            </fieldset>
+            <fieldset class="step" data-step="1">
+              <legend>Your room</legend>
+              <div class="field"><label for="r-house">House</label><select id="r-house"><option>Indiranagar</option><option>Koramangala</option><option>Whitefield</option><option>Hebbal</option><option>Help me choose</option></select></div>
+              <div class="chips" role="radiogroup" aria-label="Room">
+                <label><input type="radio" name="room" value="Pair" /><span>The Pair</span></label>
+                <label><input type="radio" name="room" value="Nook" checked /><span>The Nook</span></label>
+                <label><input type="radio" name="room" value="Loft" /><span>The Loft</span></label>
+                <label><input type="radio" name="room" value="Studio" /><span>The Studio</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="step" data-step="2">
+              <legend>Timing</legend>
+              <div class="field"><label for="r-date">Move-in date</label><input id="r-date" type="date" required /><p class="err">Pick a date from today onwards.</p></div>
+              <div class="chips" role="radiogroup" aria-label="How long">
+                <label><input type="radio" name="len" value="1-3" checked /><span>1 to 3 months</span></label>
+                <label><input type="radio" name="len" value="6" /><span>6 months</span></label>
+                <label><input type="radio" name="len" value="12" /><span>A year or more</span></label>
+              </div>
+            </fieldset>
+            <div class="step step--done" data-step="3" role="status">
+              <p class="done__title">Room requested.</p>
+              <p id="doneText">A house host will call you today to set up a visit.</p>
+            </div>
+          </div>
+          <div class="steps__nav">
+            <button type="button" class="btn btn--ghost" id="stepBack" hidden>Back</button>
+            <button type="submit" class="btn btn--ember" id="stepNext">Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot__big" aria-hidden="true">Ember House</p>
+      <div class="foot__grid">
+        <p>Serviced co-living for young professionals in Bengaluru.</p>
+        <ul><li><a href="#rooms">Rooms</a></li><li><a href="#plans">Membership</a></li><li><a href="#houses">Locations</a></li></ul>
+        <ul><li><a href="tel:+919000000000">+91 90000 00000</a></li><li><a href="mailto:hello@emberhouse.in">hello@emberhouse.in</a></li><li><a href="/CREDITS.md">Photo credits</a></li></ul>
+      </div>
+      <p class="foot__base">© 2026 Ember House. Bengaluru.</p>
+    </div>
+  </footer>
+
+  <script src="/js/vendor/gsap.min.js" defer></script>
+  <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="/js/vendor/lenis.min.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
